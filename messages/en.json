@@ -1,0 +1,215 @@
+{
+  "homePage": {
+    "navbar": {
+      "brand": "App Tek",
+      "home": "Home",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact",
+      "contact_cta": "Contact Us"
+    },
+    "hero": {
+      "title": "Trusted Digital Partner for Saudi Arabia & the Gulf",
+      "subtitle": "At App Tek, we go beyond building apps and websites — we partner with Gulf businesses to deliver secure, innovative, and scalable digital solutions that fuel long-term growth.",
+      "trusted": "Trusted Digital Partner",
+      "vision": "Vision 2030 Ready",
+      "software": "Software & Applications",
+      "professional": "Professional Websites",
+      "desktop_view": "Desktop Services",
+      "cta": "Start your Digital Journey",
+      "desktop_text": "Professional website or application solutions for your business operations.",
+      "mobile_view": "Mobile Services",
+      "mobile_text": "Custom mobile apps to engage your customers anywhere."
+    },
+    "serviceSection": {
+      "title": "Our Services",
+      "subtitle": "We offer a wide range of services to meet your business needs.",
+      "seeMore": "SeeMore",
+      "showLess": "ShowLess",
+      "core": {
+        "enterprise": {
+          "title": "Enterprise Application Development",
+          "desc": "Build powerful desktop and cloud apps to automate workflows and boost productivity."
+        },
+        "website": {
+          "title": "Website Development",
+          "desc": "Show your business online so more people can find and trust you."
+        },
+        "mobile": {
+          "title": "Mobile App Development",
+          "desc": "Reach more customers with fast, user-friendly apps for Android and cross-platform."
+        },
+        "ios": {
+          "title": "iOS Development",
+          "desc": "Engage iPhone users with smooth, high-quality apps designed for Apple devices."
+        },
+        "saas": {
+          "title": "SaaS Development",
+          "desc": "Launch scalable software-as-a-service platforms that grow with your business."
+        },
+        "ai": {
+          "title": "AI & Automation",
+          "desc": "Let smart tools handle boring tasks so you save time and money."
+        }
+      },
+      "extra": {
+        "dashboard": {
+          "title": "Dashboard Development",
+          "desc": "See your business numbers clearly and take decisions quickly."
+        },
+        "custom": {
+          "title": "Custom Software Development",
+          "desc": "Tailored software solutions that solve your business challenges and help you grow."
+        },
+        "security": {
+          "title": "Cybersecurity",
+          "desc": "Protect your business from hackers and keep data safe."
+        },
+        "blockchain": {
+          "title": "Blockchain & Web3",
+          "desc": "Offer secure payments and digital services with trust."
+        },
+        "infrastructure": {
+          "title": "IT Infrastructure",
+          "desc": "Run your computers and internet smoothly without problems."
+        },
+        "support": {
+          "title": "Maintenance & Support",
+          "desc": "We fix issues fast and keep your systems working every day."
+        }
+      }
+    },
+    "industriesSection": {
+      "title": "Industries We Serve",
+      "subtitle": "We empower Saudi businesses with cutting-edge digital solutions aligned with Vision 2030 to accelerate growth and innovation.",
+      "core": {
+        "oilgas": {
+          "title": "Oil & Gas",
+          "desc": "Smart platforms to boost energy, refinery, and petrochemical efficiency."
+        },
+        "construction": {
+          "title": "Construction & Infrastructure",
+          "desc": "Digital tools for mega-projects and smart city development."
+        },
+        "trading": {
+          "title": "Trading & Wholesale",
+          "desc": "B2B marketplaces and seamless trade management systems."
+        },
+        "finance": {
+          "title": "Finance & Islamic Banking",
+          "desc": "Secure, Shariah-compliant digital banking and fintech solutions."
+        },
+        "healthcare": {
+          "title": "Healthcare",
+          "desc": "Digital health platforms for better care and hospital efficiency."
+        },
+        "education": {
+          "title": "Education",
+          "desc": "Smart e-learning and digital campus solutions for modern learning."
+        },
+        "tourism": {
+          "title": "Tourism & Hospitality",
+          "desc": "Platforms to showcase Saudi culture and enhance visitor experience."
+        },
+        "realestate": {
+          "title": "Real Estate",
+          "desc": "AI-powered tools for property showcase, sales, and engagement."
+        },
+        "logistics": {
+          "title": "Logistics & Transport",
+          "desc": "Smart fleet tracking and supply chain optimization solutions."
+        }
+      }
+    },
+    "aboutSection": {
+      "title": "About Us",
+      "subtitle": "We are a passionate team delivering modern and reliable IT solutions — empowering your business to grow with the latest technology across Saudi Arabia.",
+      "highlight": "With extensive experience in real-world projects, we deliver high-performance solutions by combining cutting-edge technologies with global best practices. Based in Saudi Arabia, we create innovative and tailored IT solutions that drive business growth and enhance user experience.",
+      "cards": {
+        "excellence": {
+          "title": "Excellence",
+          "desc": "Creating digital experiences that exceed expectations."
+        },
+        "client": {
+          "title": "Client-Centric",
+          "desc": "Your success is our top priority."
+        },
+        "quality": {
+          "title": "Quality Assurance",
+          "desc": "Rigorous testing ensures reliable, bug-free apps."
+        },
+        "tech": {
+          "title": "Cutting-Edge Tech",
+          "desc": "Modern tools and frameworks for scalable apps."
+        },
+        "team": {
+          "title": "Expert Team",
+          "desc": "Skilled developers with years of experience."
+        },
+        "delivery": {
+          "title": "On-Time Delivery",
+          "desc": "Meeting deadlines without losing quality."
+        }
+      },
+      "stats": {
+        "trusted": {
+          "title": "Trusted",
+          "desc": "Reliable & Secure"
+        },
+        "available": {
+          "title": "24/7 Available",
+          "desc": "Always here for you"
+        },
+        "professional": {
+          "title": "Professional",
+          "desc": "Top-class services"
+        }
+      }
+    },
+    "contactSection": {
+      "title": "Contact Us",
+      "subtitle": "Let’s work together! Fill out the form or reach us directly.",
+      "form": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Your Message",
+        "submit": "Send Message",
+        "sending": "Sending...",
+        "success": "Your message has been sent successfully!",
+        "error": "Something went wrong. Please try again."
+      },
+      "info": {
+        "location": "Jeddah , Alsafa"
+      },
+      "cta": {
+        "title": "Ready to Take the Next Step?",
+        "desc": "Let’s discuss your project and bring your ideas to life.",
+        "button": "Contact Us"
+      }
+    },
+    "footer": {
+      "brand": {
+        "title": "AppTeck",
+        "desc": "Crafting scalable and modern IT solutions for businesses."
+      },
+      "quickLinks": {
+        "title": "Quick Links",
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "contact": {
+        "title": "Contact",
+        "location": "Jeddah , Alsafa ",
+        "businessAdministrator": "Business Administrator"
+      },
+      "social": {
+        "title": "Follow Us"
+      },
+      "bottom": {
+        "rights": "All Rights Reserved."
+      }
+    }
+  }
+}
