@@ -49,7 +49,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={direction}>
       <head>
-        <link rel="icon" href="/assets/svgs/logo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/images/Branding/Logo.jpeg" type="image/jpeg" />
       </head>
       <body className={direction}>
         {/* This is the main content of the page */}

@@ -4,11 +4,20 @@ import ContactForm from "./ContactForm";
 import InfoCard from "./InfoCard";
 import { useTranslations } from "next-intl";
 
-export const ContactSection = () => {
+import { Region } from "../hero/HeroSection";
+
+interface ContactSectionProps {
+  region?: Region;
+}
+
+export const ContactSection = ({ region = "saudi" }: ContactSectionProps) => {
   const t = useTranslations("homePage.contactSection");
 
   return (
-    <section id="contact" className="py-16 px-4 pb-30 sm:px-6 lg:px-20 bg-gray-50">
+    <section
+      id="contact"
+      className="py-16 px-4 pb-30 sm:px-6 lg:px-20 bg-gray-50"
+    >
       {/* Heading */}
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 bg-gradient-to-r from-[#10BCBC] to-[#0A7C7C] bg-clip-text text-transparent">

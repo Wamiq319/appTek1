@@ -18,7 +18,13 @@ import {
   FaPencilRuler,
 } from "react-icons/fa";
 
-export const ServicesSection = () => {
+import { Region } from "../hero/HeroSection";
+
+interface ServicesSectionProps {
+  region?: Region;
+}
+
+export const ServicesSection = ({ region = "saudi" }: ServicesSectionProps) => {
   const [showAll, setShowAll] = useState(false);
   const t = useTranslations("homePage.serviceSection");
 
@@ -109,7 +115,7 @@ export const ServicesSection = () => {
           </h2>
           <div className="w-20 h-1 bg-[#10BCBC] mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-           {t("subtitle")}
+            {t("subtitle")}
           </p>
         </div>
         {/* Core Services */}

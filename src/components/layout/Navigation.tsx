@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { Button, LanguageSwitcher } from "@/components";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,17 +42,17 @@ export const Navigation = () => {
     { label: t("contact"), section: "contact" },
   ];
 
-const handleWhatsAppClick = () => {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_SUPPORT;
-  const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE;
+  const handleWhatsAppClick = () => {
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_SUPPORT;
+    const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE;
 
-  if (!phone) return;
+    if (!phone) return;
 
-  window.open(
-    `https://wa.me/${phone}?text=${encodeURIComponent(message || "")}`,
-    "_blank"
-  );
-};
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(message || "")}`,
+      "_blank"
+    );
+  };
   return (
     <div>
       <nav
@@ -66,14 +67,17 @@ const handleWhatsAppClick = () => {
           {/* Mobile Row */}
           <div className="flex items-center justify-between md:hidden h-full">
             {/* Mobile Logo */}
-            <div className="flex items-center">
-              <div className="flex items-center gap-2 group">
-                <div className="p-2 border border-[#10b3bc] bg-gradient-to-t from-[#10b3bc] via-transparent to-transparent rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <Home className="w-6 h-6 text-[#10b3bc]" />
+            <div className="flex items-center py-2">
+              <div className="flex items-center gap-4 group">
+                <div className="relative h-10 w-32 transition-all duration-300 group-hover:scale-105 rounded-xl shadow-sm border border-gray-100 bg-white p-1.5 overflow-hidden">
+                  <Image
+                    src="/images/Branding/Logo.jpeg"
+                    alt="AppTek Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
-                <span className="text-lg font-extrabold bg-gradient-to-r from-blue-400 via-[#10b3bc] to-[#10b3bc] bg-clip-text text-transparent tracking-wide">
-                  {t("brand")}
-                </span>
               </div>
             </div>
 
@@ -100,13 +104,16 @@ const handleWhatsAppClick = () => {
           {/* Desktop Row */}
           <div className="hidden md:flex items-center justify-between h-full">
             {/* Left: Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="p-2 border border-[#10b3bc] bg-gradient-to-t from-[#10b3bc] via-transparent to-transparent rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300">
-                <Home className="w-6 h-6 text-[#10b3bc]" />
+            <div className="flex items-center py-2 group cursor-pointer">
+              <div className="relative h-12 w-40 transition-all duration-300 group-hover:scale-105 rounded-2xl shadow-md border border-gray-100 bg-white p-2 overflow-hidden">
+                <Image
+                  src="/images/Branding/Logo.jpeg"
+                  alt="AppTek Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
-              <span className="text-xl font-extrabold bg-gradient-to-r from-blue-500 via-[#10b3bc] to-[#10b3bc] bg-clip-text text-transparent tracking-wide">
-                {t("brand")}
-              </span>
             </div>
 
             {/* Center: Menu */}

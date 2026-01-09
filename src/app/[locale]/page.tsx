@@ -1,23 +1,11 @@
-import { useTranslations } from "next-intl";
-import {
-  AboutSection,
-  ContactSection,
-  Footer,
-  HeroSection,
-  IndustriesSection,
-  ServicesSection,
-} from "@/components";
-export default function HomePage() {
-  const t = useTranslations();
+import { redirect } from "next/navigation";
 
-  return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <ServicesSection /> 
-      <IndustriesSection/>
-      <AboutSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  );
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const target = locale === "ar" ? "saudi-gulf-arabic" : "saudi-gulf";
+  redirect(`/${locale}/${target}`);
 }

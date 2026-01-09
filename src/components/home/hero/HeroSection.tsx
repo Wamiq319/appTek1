@@ -20,7 +20,13 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 
-export const HeroSection = () => {
+export type Region = "saudi" | "northAmerica" | "global" | "saudi-gulf-arabic";
+
+interface HeroSectionProps {
+  region?: Region;
+}
+
+export const HeroSection = ({ region = "saudi" }: HeroSectionProps) => {
   const t = useTranslations("homePage.hero");
 
   const floatingIcons = [
@@ -129,17 +135,17 @@ export const HeroSection = () => {
     { icon: Smartphone, text: t("software") },
     { icon: Monitor, text: t("professional") },
   ];
-const handleWhatsAppClick = () => {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_SUPPORT;
-  const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE;
+  const handleWhatsAppClick = () => {
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_SUPPORT;
+    const message = process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE;
 
-  if (!phone) return;
+    if (!phone) return;
 
-  window.open(
-    `https://wa.me/${phone}?text=${encodeURIComponent(message || "")}`,
-    "_blank"
-  );
-};
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(message || "")}`,
+      "_blank"
+    );
+  };
 
   return (
     <section

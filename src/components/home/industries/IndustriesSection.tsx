@@ -19,7 +19,15 @@ interface IndustryItem {
   icon: IconType;
 }
 
-export const IndustriesSection: React.FC = () => {
+import { Region } from "../hero/HeroSection";
+
+interface IndustriesSectionProps {
+  region?: Region;
+}
+
+export const IndustriesSection: React.FC<IndustriesSectionProps> = ({
+  region = "saudi",
+}) => {
   const t = useTranslations("homePage.industriesSection");
 
   const data: IndustryItem[] = [
@@ -64,7 +72,7 @@ export const IndustriesSection: React.FC = () => {
   return (
     <div className="w-full h-fit relative">
       <section className="py-16 pb-20 px-6 max-w-6xl mx-auto">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-purple-50 to-white"></div>        
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-purple-50 to-white"></div>
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-[#10BCBC] to-[#0A7C7C] bg-clip-text text-transparent tracking-wide">

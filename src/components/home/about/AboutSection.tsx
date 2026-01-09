@@ -13,7 +13,13 @@ import { AboutUsCard } from "./AboutUsCard";
 import { StatsBanner } from "./StatsBanner";
 import { Cta } from "./CtaCard";
 
-export const AboutSection = () => {
+import { Region } from "../hero/HeroSection";
+
+interface AboutSectionProps {
+  region?: Region;
+}
+
+export const AboutSection = ({ region = "saudi" }: AboutSectionProps) => {
   const t = useTranslations("homePage.aboutSection");
 
   const cards = [

@@ -3,6 +3,7 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 
 export const Footer = () => {
   const t = useTranslations("homePage.footer");
@@ -12,9 +13,16 @@ export const Footer = () => {
       {/* Top Grid */}
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center sm:text-left">
         {/* Brand */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4">{t("brand.title")}</h2>
-          <p className="text-gray-200 leading-relaxed text-sm sm:text-base">
+        <div className="flex flex-col items-center sm:items-start mb-6 sm:mb-0">
+          <div className="relative h-16 w-48 mb-6 transition-all duration-300 hover:scale-105 rounded-2xl shadow-xl border border-white/10 bg-white p-3 overflow-hidden">
+            <Image
+              src="/images/Branding/Logo.jpeg"
+              alt="AppTek Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <p className="text-gray-200 leading-relaxed text-sm sm:text-base max-w-xs">
             {t("brand.desc")}
           </p>
         </div>
@@ -106,7 +114,7 @@ export const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-white/20 mt-12 pt-6 text-center text-gray-200 text-sm sm:text-base">
         <p>
-          © {new Date().getFullYear()} {t("brand.title")}. {t("bottom.rights")}
+          © {new Date().getFullYear()} AppTek. {t("bottom.rights")}
         </p>
       </div>
     </footer>
