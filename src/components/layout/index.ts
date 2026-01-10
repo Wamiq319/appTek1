@@ -1,2 +1,2 @@
-export { Navigation } from "./Navigation";
-export {Footer} from "./Footer"
+export * from "./Navigation";
+export * from "./Footer";

@@ -1,11 +1,11 @@
 import {
   AboutSection,
   ContactSection,
-  Footer,
   HeroSection,
   IndustriesSection,
   ServicesSection,
-} from "@/components";
+} from "@/sections";
+import { Footer } from "@/components";
 
 export default function SaudiGulfPage() {
   return (

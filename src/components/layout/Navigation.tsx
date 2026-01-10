@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button, LanguageSwitcher } from "@/components";
+import { Button, LanguageSwitcher, Logo } from "@/components";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,18 +66,8 @@ export const Navigation = () => {
           {/* Mobile Row */}
           <div className="flex items-center justify-between md:hidden h-full">
             {/* Mobile Logo */}
-            <div className="flex items-center py-2">
-              <div className="flex items-center gap-4 group">
-                <div className="relative h-10 w-32 transition-all duration-300 group-hover:scale-105 rounded-xl shadow-sm border border-gray-100 bg-white p-1.5 overflow-hidden">
-                  <Image
-                    src="/images/Branding/Logo.jpeg"
-                    alt="AppTek Logo"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
+            <div className="flex items-center">
+              <Logo variant="navbar" className="scale-90 origin-left" />
             </div>
 
             {/* Mobile: Language Switcher + Menu Button */}
@@ -104,17 +93,7 @@ export const Navigation = () => {
           {/* Desktop Row */}
           <div className="hidden md:flex items-center justify-between h-full">
             {/* Left: Logo */}
-            <div className="flex items-center py-2 group cursor-pointer">
-              <div className="relative h-12 w-40 transition-all duration-300 group-hover:scale-105 rounded-2xl shadow-md border border-gray-100 bg-white p-2 overflow-hidden">
-                <Image
-                  src="/images/Branding/Logo.jpeg"
-                  alt="AppTek Logo"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
+            <Logo variant="navbar" />
 
             {/* Center: Menu */}
             <div className="flex space-x-6">

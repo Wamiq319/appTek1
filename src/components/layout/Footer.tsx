@@ -3,7 +3,7 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import Image from "next/image";
+import { Logo } from "@/components";
 
 export const Footer = () => {
   const t = useTranslations("homePage.footer");
@@ -14,14 +14,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center sm:text-left">
         {/* Brand */}
         <div className="flex flex-col items-center sm:items-start mb-6 sm:mb-0">
-          <div className="relative h-16 w-48 mb-6 transition-all duration-300 hover:scale-105 rounded-2xl shadow-xl border border-white/10 bg-white p-3 overflow-hidden">
-            <Image
-              src="/images/Branding/Logo.jpeg"
-              alt="AppTek Logo"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <Logo variant="footer" className="mb-6" />
           <p className="text-gray-200 leading-relaxed text-sm sm:text-base max-w-xs">
             {t("brand.desc")}
           </p>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Input, TextArea } from "@/components";
 
 export default function ContactForm() {
   const t = useTranslations("homePage.contactSection.form");
@@ -37,12 +38,6 @@ export default function ContactForm() {
     }
   };
 
-  const inputWrapper = "relative w-full";
-  const labelStyle =
-    "absolute left-3 top-3 text-gray-400 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#10BCBC]";
-  const inputStyle =
-    "peer w-full border border-gray-200 rounded-xl px-3 pt-6 pb-2 text-gray-700 focus:ring-2 focus:ring-[#10BCBC] outline-none bg-white";
-
   return (
     <motion.div
       id="contactForm"
@@ -50,44 +45,31 @@ export default function ContactForm() {
       className="bg-white p-6 sm:p-8 rounded-2xl shadow-md"
     >
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className={inputWrapper}>
-          <input
-            type="text"
-            name="name"
-            placeholder=" "
-            required
-            value={form.name}
-            onChange={handleChange}
-            className={inputStyle}
-          />
-          <label className={labelStyle}>{t("name")}</label>
-        </div>
+        <Input
+          name="name"
+          label={t("name")}
+          required
+          value={form.name}
+          onChange={handleChange}
+        />
 
-        <div className={inputWrapper}>
-          <input
-            type="email"
-            name="email"
-            placeholder=" "
-            required
-            value={form.email}
-            onChange={handleChange}
-            className={inputStyle}
-          />
-          <label className={labelStyle}>{t("email")}</label>
-        </div>
+        <Input
+          type="email"
+          name="email"
+          label={t("email")}
+          required
+          value={form.email}
+          onChange={handleChange}
+        />
 
-        <div className={inputWrapper}>
-          <textarea
-            name="message"
-            placeholder=" "
-            rows={7}
-            required
-            value={form.message}
-            onChange={handleChange}
-            className={`${inputStyle} min-h-[120px]`}
-          />
-          <label className={labelStyle}>{t("message")}</label>
-        </div>
+        <TextArea
+          name="message"
+          label={t("message")}
+          rows={7}
+          required
+          value={form.message}
+          onChange={handleChange}
+        />
 
         <button
           type="submit"
