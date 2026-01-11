@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Button, LanguageSwitcher, Logo } from "@/components";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -52,6 +52,14 @@ export const Navigation = () => {
       "_blank"
     );
   };
+
+  const handleEmailClick = () => {
+    const email = process.env.NEXT_PUBLIC_EMAIL_SUPPORT;
+    if (!email) return;
+    window.location.href = `mailto:${email}`;
+  };
+
+  const isSaudi = pathname.includes("saudi-gulf");
   return (
     <div>
       <nav
@@ -74,12 +82,13 @@ export const Navigation = () => {
             <div className="flex items-center space-x-2">
               <LanguageSwitcher />
               <Button
-                variant="outline"
-                size="medium"
+                variant="ghost"
+                size="md"
                 rounded="full"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
                 aria-label="Toggle menu"
+                className="p-2"
               >
                 {isOpen ? (
                   <X className="w-6 h-6" />
@@ -110,16 +119,31 @@ export const Navigation = () => {
 
             {/* Right: CTA + Language */}
             <div className="flex items-center space-x-3">
-              <Button
-                variant="primary"
-                rounded="full"
-                onClick={handleWhatsAppClick}
-              >
-                <span className="flex items-center gap-2">
-                  <FaWhatsapp size={18} />
-                  {t("contact_cta")}
-                </span>
-              </Button>
+              {isSaudi ? (
+                <Button
+                  variant="whatsapp"
+                  size="md"
+                  rounded="full"
+                  onClick={handleWhatsAppClick}
+                >
+                  <span className="flex items-center gap-2">
+                    <FaWhatsapp size={18} />
+                    {t("whatsapp_cta")}
+                  </span>
+                </Button>
+              ) : (
+                <Button
+                  variant="primary"
+                  size="md"
+                  rounded="full"
+                  onClick={handleEmailClick}
+                >
+                  <span className="flex items-center gap-2">
+                    <Mail size={18} />
+                    {t("contact_cta")}
+                  </span>
+                </Button>
+              )}
 
               <LanguageSwitcher />
             </div>
@@ -141,18 +165,33 @@ export const Navigation = () => {
               ))}
 
               <div className="pt-4">
-                <Button
-                  variant="primary"
-                  size="medium"
-                  rounded="full"
-                  onClick={handleWhatsAppClick}
-                  className="w-full flex justify-center"
-                >
-                  <span className="flex items-center gap-2">
-                    <FaWhatsapp size={18} />
-                    {t("contact_cta")}
-                  </span>
-                </Button>
+                {isSaudi ? (
+                  <Button
+                    variant="whatsapp"
+                    size="md"
+                    rounded="full"
+                    onClick={handleWhatsAppClick}
+                    className="w-full flex justify-center"
+                  >
+                    <span className="flex items-center gap-2">
+                      <FaWhatsapp size={18} />
+                      {t("whatsapp_cta")}
+                    </span>
+                  </Button>
+                ) : (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    rounded="full"
+                    onClick={handleEmailClick}
+                    className="w-full flex justify-center"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Mail size={18} />
+                      {t("contact_cta")}
+                    </span>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
@@ -163,8 +202,10 @@ export const Navigation = () => {
         {isScrolled2 && (
           <motion.button
             key="whatsapp-btn"
-            onClick={handleWhatsAppClick}
-            className="fixed bottom-4 z-20 right-4 bg-green-500 p-4 rounded-full shadow-lg text-white md:hidden"
+            onClick={isSaudi ? handleWhatsAppClick : handleEmailClick}
+            className={`fixed bottom-4 z-20 right-4 ${
+              isSaudi ? "bg-green-500" : "bg-[#10b3bc]"
+            } p-4 rounded-full shadow-lg text-white md:hidden`}
             initial={{ y: -500, opacity: 0, rotate: -15 }}
             animate={{ y: 0, opacity: 1, rotate: 0 }}
             exit={{ opacity: 0, y: 100 }}
@@ -176,7 +217,7 @@ export const Navigation = () => {
             }}
             whileHover={{ scale: 1.1 }}
           >
-            <FaWhatsapp size={28} />
+            {isSaudi ? <FaWhatsapp size={28} /> : <Mail size={28} />}
           </motion.button>
         )}
       </AnimatePresence>

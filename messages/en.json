@@ -6,20 +6,56 @@
       "services": "Services",
       "about": "About Us",
       "contact": "Contact",
-      "contact_cta": "Contact Us"
+      "contact_cta": "Contact Us",
+      "whatsapp_cta": "WhatsApp Us"
     },
     "hero": {
-      "title": "Trusted Digital Partner for Saudi Arabia & the Gulf",
-      "subtitle": "At App Tek, we go beyond building apps and websites — we partner with Gulf businesses to deliver secure, innovative, and scalable digital solutions that fuel long-term growth.",
-      "trusted": "Trusted Digital Partner",
-      "vision": "Vision 2030 Ready",
-      "software": "Software & Applications",
-      "professional": "Professional Websites",
-      "desktop_view": "Desktop Services",
-      "cta": "Start your Digital Journey",
-      "desktop_text": "Professional website or application solutions for your business operations.",
-      "mobile_view": "Mobile Services",
-      "mobile_text": "Custom mobile apps to engage your customers anywhere."
+      "saudi": {
+        "title": "<span class='whitespace-nowrap'>Get a Professional Website</span> <br class='hidden lg:block' /> for Your Saudi & Gulf Startup",
+        "subtitle": "Empowering founders in Saudi & the Gulf. We build high-performance websites for consulting, petroleum, and supply chain businesses that drive real growth—without the high costs.",
+        "tagline": "Fast. Affordable. Easy. That's AppTek1.",
+        "badge1": "Fast & Quick",
+        "badge2": "Affordable Pricing",
+        "badge3": "Easy to Manage",
+        "badge4": "Corporate Web Platforms",
+        "desktop_view": "Business Operations",
+        "cta": "Make Your Website Today",
+        "desktop_text": "High-performance Next.js websites designed for conversion. Whether you're launching a consulting practice, establishing your petroleum services brand, or building credibility in supply chain—we create websites that attract clients and drive growth.",
+        "mobile_view": "Mobile Innovation",
+        "mobile_text": "A clean, professional website that's easy to manage. People check websites on their phones first. We make sure your customers see you as professional and trustworthy—all at a price that makes sense for startups. Easy to update, easy to use, easy on your wallet.",
+        "domain": "www.apptek.sa"
+      },
+
+      "northAmerica": {
+        "title": "Professional Websites That Work as Hard as You Do",
+        "subtitle": "We build modern, conversion-focused websites for service firms and consultants who want to compete like enterprises. No bloated code. No hidden costs. Just a platform that brings in clients and scales with your business.",
+        "tagline": "Professional. Fast. Built to Convert.",
+        "badge1": "Conversion Optimized",
+        "badge2": "Enterprise Quality",
+        "badge3": "Built to Scale",
+        "badge4": "Professional Platforms",
+        "desktop_view": "Lead Generation",
+        "cta": "Book a Strategy Call",
+        "desktop_text": "Your website is your best salesman. We build sites that showcase your expertise, build trust, and turn visitors into paying clients. Clean, modern design. Fast load speeds. Optimized for the leads that matter.",
+        "mobile_view": "Mobile First",
+        "mobile_text": "Most clients find you on mobile. We deliver beautiful, fast experiences that make your services easy to discover and book—anytime, anywhere.",
+        "domain": "www.apptek.com"
+      },
+      "global": {
+        "title": "Premium Digital Solutions for Global Service Leaders",
+        "subtitle": "We partner with ambitious firms worldwide to build high-performance digital platforms. From custom software to conversion-focused websites, we deliver the technical excellence your business deserves.",
+        "tagline": "Global Reach. Technical Excellence.",
+        "badge1": "Global Standards",
+        "badge2": "Premium Quality",
+        "badge3": "Scalable Tech",
+        "badge4": "Strategic Design",
+        "desktop_view": "Digital Strategy",
+        "cta": "Request a Proposal",
+        "desktop_text": "Scale your business globally with a website that reflects your premium status. We build secure, reliable, and high-performance platforms that help you win clients across borders.",
+        "mobile_view": "Global Access",
+        "mobile_text": "Your global audience is mobile. We ensure your digital presence is flawless on every device, providing a seamless experience for clients from London to Tokyo.",
+        "domain": "www.apptek.global"
+      }
     },
     "serviceSection": {
       "title": "Our Services",

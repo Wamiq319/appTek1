@@ -13,12 +13,14 @@ interface RegionOption {
   locale: string;
   path: string;
   flag: string;
+  short: string;
 }
 
 const regions: RegionOption[] = [
   {
     id: "saudi-en",
     label: "Saudi & Gulf (EN)",
+    short: "SA",
     locale: "en",
     path: "/saudi-gulf",
     flag: "🇸🇦",
@@ -26,6 +28,7 @@ const regions: RegionOption[] = [
   {
     id: "saudi-ar",
     label: "السعودية والخليج (AR)",
+    short: "SA",
     locale: "ar",
     path: "/saudi-gulf-arabic",
     flag: "🇸🇦",
@@ -33,6 +36,7 @@ const regions: RegionOption[] = [
   {
     id: "na-en",
     label: "North America (EN)",
+    short: "NA",
     locale: "en",
     path: "/north-america",
     flag: "🇺🇸",
@@ -40,6 +44,7 @@ const regions: RegionOption[] = [
   {
     id: "global-en",
     label: "Global (EN)",
+    short: "GL",
     locale: "en",
     path: "/global",
     flag: "🌐",
@@ -80,23 +85,23 @@ export const LanguageSwitcher = () => {
   return (
     <div className="relative" ref={dropdownRef}>
       <Button
-        variant="outline"
+        variant="neon"
         rounded="full"
-        size="medium"
+        size="md"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 font-semibold bg-white/80 backdrop-blur-sm border-gray-200 hover:border-[#10b3bc] transition-all duration-300 min-w-[160px] justify-between"
+        className="flex items-center gap-2 font-semibold transition-all duration-300 min-w-[80px] sm:min-w-[160px] justify-between px-3 sm:px-4"
       >
         <div className="flex items-center gap-2">
           <span className="text-lg">{currentOption.flag}</span>
           <span className="hidden sm:inline text-sm">
             {currentOption.label}
           </span>
-          <span className="sm:hidden text-sm">
-            {currentOption.locale === "ar" ? "Arabic" : "English"}
+          <span className="sm:hidden text-sm font-bold">
+            {currentOption.short}
           </span>
         </div>
         <ChevronDown
-          className={`w-4 h-4 transition-transform duration-300 ${
+          className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
